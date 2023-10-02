@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotham city crime Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🦇Gotham city crime Dashboard🦇</h1>
+    <main>
+        <div>
+            <h1 class="change1">0</h1>
+            <p>Criminals Attack Report</p>
+        </div>
+        <div>
+            <h1 class="change2">0</h1>
+            <p>Power loss Report</p>
+        </div>
+        <div>
+            <h1 class="change3">0</h1>
+            <p>Alien Attack Report</p>
+        </div>
+
+    </main>
+    <script>
+        setInterval(()=>{
+            let b=document.querySelector(".change1");
+            let c=document.querySelector(".change2");
+            b.style.color="white";
+            c.style.color="white";
+            b.innerText=Math.floor( Math.random()*100);
+            c.innerText = Math.floor( Math.random()*100);
+            if (parseInt(b.innerText) > 30){
+            b.style.color="red";
+            }
+            if(parseInt(c.innerText) > 30){
+            c.style.color="red"
+            }
+        },
+        10000)
+    </script>
+</body>
+</html>
